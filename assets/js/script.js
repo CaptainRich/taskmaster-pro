@@ -1,5 +1,10 @@
 var tasks = {};
 
+$("#modalDueDate").datepicker({
+  minDate: 1
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 var createTask = function(taskText, taskDate, taskList) {
   // create elements that make up a task item
   var taskLi = $("<li>").addClass("list-group-item");
@@ -13,11 +18,15 @@ var createTask = function(taskText, taskDate, taskList) {
   // append span and p element to parent li
   taskLi.append(taskSpan, taskP);
 
+  // check the due date
+  auditTask( taskLi );
+
 
   // append to ul list on the page
   $("#list-" + taskList).append(taskLi);
 };
 
+/////////////////////////////////////////////////////////////////////////////////////////
 var loadTasks = function() {
   tasks = JSON.parse(localStorage.getItem("tasks"));
 
@@ -168,15 +177,24 @@ $(".list-group").on("click", "span", function() {
   // Create the new input element
   var dateInput = $("<input>").attr("type", "text").addClass("form-control").val(date);
 
-  // Swap out the elements
   $(this).replaceWith(dateInput);
 
-  // Automatically focus on the new element
+  // Enable the JQueryUI datepicker
+  dateInput.datepicker({
+    minDate: 1,
+    onClose: function(){
+      // When the calendar is closed, force a "change" event on the 'dateInput'
+      $(this).trigger("change");
+    }
+  });
+
+  // Automatically bring up the calendar
   dateInput.trigger("focus");
+
 });
 
 // After the date has been changed, change it back to a 'p' element.
-$(".list-group").on("blur", "input[type='text']", function() {
+$(".list-group").on("change", "input[type='text']", function() {
   // get the current text/value
   var date = $(this).val().trim();
 
@@ -230,6 +248,15 @@ $("#task-form-modal .btn-primary").click(function() {
   }
 });
 
+
+/////////////////////////////////////////////////////////////////////
+// Setup the 'date' audit function
+var auditTask = function(taskEl) {
+  // To ensure the element is getting into the funciton
+  console.log( "Auditing option: ", taskEl );
+}
+
+/////////////////////////////////////////////////////////////////////
 // remove all tasks
 $("#remove-tasks").on("click", function() {
   for (var key in tasks) {
@@ -239,6 +266,8 @@ $("#remove-tasks").on("click", function() {
   saveTasks();
 });
 
+
+///////////////////////////////////////////////////////////////////
 // load tasks for the first time
 loadTasks();
 
