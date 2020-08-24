@@ -290,3 +290,13 @@ $("#remove-tasks").on("click", function() {
 loadTasks();
 
 
+///////////////////////////////////////////////////////////////////
+// Start a timer to audit the tasks every 30 minutes (in case the
+// browser is left open for days), so that near/past dates can be
+// colored appropriately.
+
+setInterval(function() {
+ $(".card .list-group-item").each(function(el){
+   auditTask(el);
+ });
+}, 1800000);       // audit the tasks every 30 minutes
