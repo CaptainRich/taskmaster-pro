@@ -211,6 +211,9 @@ $(".list-group").on("change", "input[type='text']", function() {
   // Recreate the 'span' element with 'Bootstrap' classes
   var taskSpan = $("<span>").addClass("badge badge-primary badge-pill").text(date);
   $(this).replaceWith(taskSpan);
+
+  // Pass this task's <li> element into the 'auditTask()' function to check the new due-date.
+  auditTask( $(taskSpan).closest(".list-group-item"));
 })
 
 
@@ -252,8 +255,23 @@ $("#task-form-modal .btn-primary").click(function() {
 /////////////////////////////////////////////////////////////////////
 // Setup the 'date' audit function
 var auditTask = function(taskEl) {
-  // To ensure the element is getting into the funciton
-  console.log( "Auditing option: ", taskEl );
+
+  // Get the date from the task element
+  var date = $(taskEl).find("span").text().trim();
+
+  // Convert the date to a moment object at 5pm
+  var time = moment(date, "L").set("hour", 17);
+
+  // Remove any old classes from the element
+  $(taskEl).removeClass("list-group-item-warning list-group-item-danger");
+
+  // Apply new class if the task is near/over the due date
+  if( moment().isAfter(time)) {
+    $(taskEl).addClass("list-group-item-danger");
+  }
+  else if (Math.abs(moment().diff(time, "days")) <= 2) {
+    $(taskEl).addClass("list-group-item-warning");
+  }
 }
 
 /////////////////////////////////////////////////////////////////////
