@@ -144,12 +144,12 @@ $(".list-group").on("click", "p", function() {
     .text()
     .trim();
 
-  var textInput = $("<textArea>")
+  var textInput = $("<textArea>")        // create a new <textarea> element
     .addClass("formControl")
     .val(text);
 
-    $(this).replaceWith(textInput);
-    textInput.trigger("focus");
+    $(this).replaceWith(textInput);      // replace the existing <p> with the new <textarea> for editing
+    textInput.trigger("focus");          // give the focus to the new <textarea> for editing
 
   console.log(text);  // call back that just shows a 'p' was clicked
 });
@@ -164,7 +164,7 @@ $(".list-group").on("blur", "textarea", function() {
   // Get the parent ul's ID attribute
   var status = $(this).closest(".list-group").attr("id").replace("list-", "");
 
-  // Get the task's postition in the list of other li elements
+  // Get the task's position in the list of other li elements
   var index = $(this).closest(".list-group-item").index();
 
   // Update the edited task using the three values just determined.
