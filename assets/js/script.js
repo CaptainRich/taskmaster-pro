@@ -210,10 +210,10 @@ $(".list-group").on("change", "input[type='text']", function() {
   // Get the parent ul's ID attribute
   var status = $(this).closest(".list-group").attr("id").replace("list-", "");
 
-  // Get the task's postition in the list of other li elements
+  // Get the task's position in the list of other li elements
   var index = $(this).closest(".list-group-item").index();
 
-  // Update the task in the array and resave to localstorage
+  // Update the task in the array and re-save to local storage
   tasks[status][index].date = date;
   saveTasks();
 
