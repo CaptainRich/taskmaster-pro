@@ -36,12 +36,16 @@
       </p>
     </header>
 
+    <!-- This section is layed out with 'Bootstrap' classes to arrange the column content. -->
     <main class="col-12 col-lg-9 d-flex flex-column">
       <!-- The "To Do" column -->
       <div class="m-5 row justify-content-around">
         <div class="col-12 col-md-6 col-xl-3 mb-3">
-          <div class="card">
-            <h4 class="card-header bg-dark text-light">To Do</h4>
+          <!-- col-12 - take the full width of 12 columns, one item per row -->
+          <!-- for 768px wide, the col-md-6 controls the lists take 6 columns each, two items per row -->
+          <!-- for 1200px wide, the col-md-3 controls and the lists take 3 columns each, 4 items per row -->
+          <div class="card border-primary" style="max-width: 18rem;">
+            <h4 class="card-header bg-primary text-light">To Do</h4>
             <ul id="list-toDo" class="list-group list-group-flush"> 
               <!-- <li class="list-group-item">
                 <span class="badge badge-primary badge-pill">05/28/2020</span>
@@ -54,8 +58,8 @@
     
         <!-- The "In Progress" column -->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
-          <div class="card">
-            <h4 class="card-header bg-dark text-light">In Progress</h4>
+          <div class="card border-primary" style="max-width: 18rem;">
+            <h4 class="card-header bg-primary text-light">In Progress</h4>
             <ul id="list-inProgress" class="list-group list-group-flush">
               <!-- <li class="list-group-item">
                 <span class="badge badge-primary badge-pill">05/28/2020</span>
@@ -66,10 +70,10 @@
         </div>
         <!-- End of "In Progress" column -->
     
-        <!-- Start the "In Rreview" column -->
+        <!-- Start the "In Review" column -->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
-          <div class="card">
-            <h4 class="card-header bg-dark text-light">In Review</h4>
+          <div class="card border-primary" style="max-width: 18rem;">
+            <h4 class="card-header bg-primary text-light" >In Review</h4>
             <ul id="list-inReview" class="list-group list-group-flush">
               <!-- <li class="list-group-item">
                 <span class="badge badge-primary badge-pill">05/28/2020</span>
@@ -82,8 +86,8 @@
     
         <!-- Start of the "Done" column -->
         <div class="col-12 col-md-6 col-xl-3 mb-3">
-          <div class="card">
-            <h4 class="card-header bg-dark text-light">Done</h4>
+          <div class="card border-primary" style="max-width: 18rem;">
+            <h4 class="card-header bg-primary text-light">Done</h4>
             <ul id="list-done" class="list-group list-group-flush">
               <!-- <li class="list-group-item">
                 <span class="badge badge-primary badge-pill">05/28/2020</span>
