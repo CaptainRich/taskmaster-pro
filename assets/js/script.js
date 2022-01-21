@@ -1,7 +1,7 @@
 var tasks = {};
 
 $("#modalDueDate").datepicker({
-  minDate: 1
+  minDate: 1         // set the minimum date to one day past the present day.
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -18,7 +18,8 @@ var createTask = function(taskText, taskDate, taskList) {
   // append span and p element to parent li
   taskLi.append(taskSpan, taskP);
 
-  // check the due date
+  // Check the due date to see if is close to the current date.
+  // Depending on this check, background-color classes can vary.
   auditTask( taskLi );
 
 
@@ -265,7 +266,7 @@ $("#task-form-modal .btn-save").click(function() {
 // Setup the 'date' audit function
 var auditTask = function(taskEl) {
 
-  // Get the date from the task element
+  // Get the date from the task element, which is in the 'span' element.j
   var date = $(taskEl).find("span").text().trim();
 
   // Convert the date to a moment object at 5pm
