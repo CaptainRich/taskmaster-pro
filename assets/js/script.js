@@ -102,7 +102,7 @@ $(".card .list-group").sortable({
         date: date
       });
     });
-    console.log( "This is the tempArr: ", tempArr);
+    //console.log( "This is the tempArr: ", tempArr);
 
     // Trim down list's ID to match the object property
     var arrName = $(this)
@@ -124,15 +124,15 @@ $("#trash").droppable({
   drop: function(event, ui) {
     $(".bottom-trash").removeClass("bottom-trash-drag");
     ui.draggable.remove();
-    console.log("drop");
+    //console.log("drop");
   },
   over: function(event, ui) {
     $(".bottom-trash").addClass("bottom-trash-active");
-    console.log("over");
+    //console.log("over");
   },
   out: function(event, ui) {
     $(".bottom-trash").removeClass("bottom-trash-drag");
-    console.log("out");
+    //console.log("out");
   }
 });
 
