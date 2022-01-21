@@ -64,3 +64,8 @@ ul.list-group {
 .btn-add:hover, .btn-save:hover, .btn-close:hover, .btn-delete:hover {
   background-position: 1px -50px;
 }
+
+/* Custom styling for JQueryUI */
+.ui-datepicker-header {
+  background-color: rgb(115, 178, 230);
+}
