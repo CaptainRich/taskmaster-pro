@@ -123,7 +123,7 @@ $("#trash").droppable({
   tolerance: "touch",
   drop: function(event, ui) {
     $(".bottom-trash").removeClass("bottom-trash-drag");
-    ui.draggable.remove();
+    ui.draggable.remove(); // this invokes a 'sortable update, which saves everything to local storage.
     //console.log("drop");
   },
   over: function(event, ui) {
