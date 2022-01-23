@@ -13,16 +13,16 @@
   <!-- Include the Iconic icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Taskmaster Pro</title>
+  <title>Taskmaster</title>
 </head>
 
 <body>
 
   <div class="row min-vh-100 no-gutters">
     <header class="col-12 col-lg-2 bg-dark text-light sticky-top d-flex flex-column p-4 p-lg-3" >
-      <h1 class="text-center">
+      <h2 class="text-center">
         <span class="oi oi-task d-inline d-lg-none"></span>
-        Taskmaster Pro Edition</h1>
+        Taskmaster</h2>
 
       <!-- The value of 'data-target' below ties to the 'id' of the modal dialog below.-->
       <button id="create-task" class="btn btn-block btn-add" data-toggle="modal" data-target="#task-form-modal">
@@ -31,8 +31,8 @@
       <button id="remove-tasks" class="btn btn-block btn-delete"><span class="oi oi-trash mr-2"></span>Delete All Tasks</button>
 
       <span class="oi oi-task display-4 text-center mb-2 d-none d-lg-block mt-auto text-success"></span>
-      <p class="d-none d-lg-block"><br>A Kanban Board application for managing tasks and their status.
-      </p>
+      <p class="d-none d-lg-block"><br>A Kanban Board application for managing tasks and their status. Drag & drop tasks to update their status, click to modify.</p>
+      <p class="d-none d-lg-block">(by: R. Ay, 2/21)</p>
     </header>
 
     <!-- This section is layed out with 'Bootstrap' classes to arrange the column content. -->
@@ -44,7 +44,7 @@
           <!-- for 768px wide, the col-md-6 controls the lists take 6 columns each, two items per row -->
           <!-- for 1200px wide, the col-md-3 controls and the lists take 3 columns each, 4 items per row -->
           <div class="card border-primary" style="max-width: 18rem;">
-            <h4 class="card-header bg-primary text-light">To Do</h4>
+            <h4 class="card-header bg-primary text-light" ">To Do</h4>
             <ul id="list-toDo" class="list-group list-group-flush"> 
               <!-- <li class="list-group-item">
                 <span class="badge badge-primary badge-pill">05/28/2020</span>
