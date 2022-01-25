@@ -1,5 +1,5 @@
 
-/* Implement the custom Google Styles */
+/* Implement the custom Google Font Families */
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -21,7 +21,7 @@ ul.list-group {
 }
 
 .dropover-active{
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(82, 82, 160, 0.3);
 }
 
 /* Styles for the 'delete' drop zone */
@@ -32,7 +32,7 @@ ul.list-group {
   font-family: "Staanliches", sans-serif;
   transform: translate(150px);                 /* this moves the region down below the view */
   transition: all .5s ease-in-out;
-  background-color: rgba(234,0,39,0.7);
+  background-color: rgba(234,0,39,0.5);
 }
 
 .bottom-trash-drag {

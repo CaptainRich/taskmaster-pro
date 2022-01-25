@@ -65,20 +65,20 @@ $(".card .list-group").sortable({
   activate: function(event) {
     $(this).addClass("dropover");
     $(".bottom-trash").addClass("bottom-trash-drag");
-    console.log("activate", this);
+    //console.log("activate", this);
   },
   deactivate: function(event) {
     $(this).removeClass("dropover");
     $(".bottom-trash").removeClass("bottom-trash-drag");
-    console.log("deactivate", this);
+    //console.log("deactivate", this);
   },
   over: function(event) {
     $(event.target).addClass("dropover-active");
-    console.log("over", event.target);
+    //console.log("over", event.target);
   },
   out: function(event) {
     $(event.target).removeClass("dropover-active");
-    console.log("out", event.target);
+    //console.log("out", event.target);
   },
   update: function(event) {
 
@@ -305,8 +305,10 @@ loadTasks();
 // browser is left open for days), so that near/past dates can be
 // colored appropriately.
 
+// Loop over every task on the page with a class of "list-group-item" and
+// execute the 'auditTask' function.
 setInterval(function() {
  $(".card .list-group-item").each(function(el){
    auditTask(el);
  });
-}, 1800000);       // audit the tasks every 30 minutes
+}, 1800000);       // audit the tasks every 30 minutes (30*(60*1000))
