@@ -25,6 +25,9 @@ The application is responsive to the device window.  The display of the various 
 - for medium size screens, the header area is to the left and there are two rows of two status zones. 
 - for smaller size screens, the header area moves to the top of the window and the status zones are arranged in a vertical column.
 
+**Persistence**
+All tasks (and associated information) is saved to local browser storage.  When the application is started, task information is retrieved from local storage and displayed in the browser window.  New tasks, and task modifications, are immediately saved to local browser storage.
+
 
 ## Technologies Used
 
@@ -45,3 +48,4 @@ The deployment link on GitHub is: https://CaptainRich.github.io/taskmaster-pro
 ## Application Screen Shots
 
 ![Screenshot](./assets/images/taskmaster.jpg) Image of the application.
+![Screenshot2](./assets/images/taskmaster2.jpg) Image of the application on medium width display.
