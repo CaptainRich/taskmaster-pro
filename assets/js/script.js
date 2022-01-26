@@ -273,14 +273,14 @@ var auditTask = function(taskEl) {
   var time = moment(date, "L").set("hour", 17);
 
   // Remove any old classes from the element
-  $(taskEl).removeClass("list-group-item-warning list-group-item-danger");
+  $(taskEl).removeClass("list-group-item-warning list-group-item-danger border-danger border-warning");
 
   // Apply new class if the task is near/over the due date
   if( moment().isAfter(time)) {
-    $(taskEl).addClass("list-group-item-danger list-group-item border border-danger rounded rounded rounded-3");
+    $(taskEl).addClass("list-group-item-danger list-group-item border border-danger rounded rounded-3");
   }
   else if (Math.abs(moment().diff(time, "days")) <= 2) {
-    $(taskEl).addClass("list-group-item-warning list-group-item border border-warning rounded rounded rounded-3");
+    $(taskEl).addClass("list-group-item-warning list-group-item border border-warning rounded rounded-3");
   }
 } 
 

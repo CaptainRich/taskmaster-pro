@@ -47,5 +47,6 @@ The deployment link on GitHub is: https://CaptainRich.github.io/taskmaster-pro
 
 ## Application Screen Shots
 
-![Screenshot](./assets/images/taskmaster.jpg) Image of the application.
+![Screenshot](./assets/images/taskmaster.jpg) Image of the application on large width display.  
+
 ![Screenshot2](./assets/images/taskmaster2.jpg) Image of the application on medium width display.

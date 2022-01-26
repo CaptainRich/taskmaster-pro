@@ -65,10 +65,15 @@ ul.list-group {
   background-position: 1px -50px;
 }
 
-/* Style to apply color gradient to the header area. */
+/* Style to apply color gradient to the header area and status columns. */
 .graded-header {
   background-color: #000000;
   background-image: linear-gradient(180deg, #242323 0%, #696767 90% );
+}
+
+.graded-status {
+  background-color: #0d6efd;
+  background-image: linear-gradient(180deg, #0d6efd 0%, #78a5e9 90% );
 }
 
 
