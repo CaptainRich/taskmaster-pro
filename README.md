@@ -44,4 +44,4 @@ The deployment link on GitHub is: https://CaptainRich.github.io/taskmaster-pro
 
 ## Application Screen Shots
 
-![Landing Page](./assets/images/landing-page.jpg) Image of the site landing page.
+![Screenshot](./assets/images/taskmaster.jpg) Image of the application.
