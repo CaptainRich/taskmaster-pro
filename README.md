@@ -1,13 +1,13 @@
 # Taskmaster
 A Task Management Tool  
-Richard Ay (August 2020, updated January 2022)
+Richard Ay (August 2020, *updated January 2022*)
 
 
 ## Table of Contents
 * [Application Walk Through](#application-walk-through)
 * [Technologies Used](#technologies-used)
 * [Deployment Link](#deployment-link)
-* [Application Screen Shots](#application-screen-shot)
+* [Application Screen Shots](#application-screen-shots)
 
 ## Application Walk Through
 

@@ -7,7 +7,7 @@ $("#modalDueDate").datepicker({
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 var createTask = function(taskText, taskDate, taskList) {
   // create elements that make up a task item
-  var taskLi = $("<li>").addClass("list-group-item");
+  var taskLi = $("<li>").addClass("list-group-item border border-primary rounded rounded-3");
   var taskSpan = $("<span>")
     .addClass("badge badge-primary badge-pill")
     .text(taskDate);
@@ -277,12 +277,12 @@ var auditTask = function(taskEl) {
 
   // Apply new class if the task is near/over the due date
   if( moment().isAfter(time)) {
-    $(taskEl).addClass("list-group-item-danger");
+    $(taskEl).addClass("list-group-item-danger list-group-item border border-danger rounded rounded rounded-3");
   }
   else if (Math.abs(moment().diff(time, "days")) <= 2) {
-    $(taskEl).addClass("list-group-item-warning");
+    $(taskEl).addClass("list-group-item-warning list-group-item border border-warning rounded rounded rounded-3");
   }
-}
+} 
 
 /////////////////////////////////////////////////////////////////////
 // remove all tasks
